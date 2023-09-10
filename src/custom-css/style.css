@@ -1,0 +1,13 @@
+/* Add a custom CSS class */
+.bold-on-hover {
+  transition: font-weight 0.1s; /* Add a smooth transition effect */
+}
+
+/* Define the font-weight change on hover */
+.bold-on-hover:hover {
+  font-weight: 800;
+}
+
+.custom-dropdown {
+  right: -20px; /* Adjust this value as needed */
+}
