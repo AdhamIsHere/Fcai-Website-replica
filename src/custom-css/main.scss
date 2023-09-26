@@ -1,0 +1,10 @@
+@import '../../node_modules/bootstrap/scss/_functions';
+@import '../../node_modules/bootstrap/scss/_variables';
+
+
+$custom-colors :(
+    'altprim':#1a2bd2
+);
+
+$theme-colors:map-merge($custom-colors,$theme-colors);
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

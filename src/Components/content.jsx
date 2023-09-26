@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../custom-css/style.css";
-import "bootstrap/dist/css/bootstrap.css";
+import "../css/main.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.js";
 

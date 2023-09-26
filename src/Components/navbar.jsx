@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../custom-css/style.css";
-import "bootstrap/dist/css/bootstrap.css";
+import "../css/main.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.js";
 
@@ -10,7 +10,7 @@ class NavBar extends Component {
   state = {};
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-primary navbar-dark">
+      <nav className="navbar navbar-expand-lg bg-altprim navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img
@@ -113,23 +113,76 @@ class NavBar extends Component {
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li>
-                    <a className="dropdown-item bold-on-hover" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item bold-on-hover" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item bold-on-hover" href="#">
-                      Something else here
+                    <a
+                      className="dropdown-item bold-on-hover"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#Login"
+                    >
+                      Login
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="modal fade" id="Login" tabindex="-1">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="LoginLabel">
+                  Login
+                </h1>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div className="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">
+                      Email address
+                    </label>
+                    <input type="email" class="form-control" id="email" />
+                    <div id="emailHelp" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">
+                      Password
+                    </label>
+                    <input type="password" class="form-control" id="password" />
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="rememberMe"
+                    />
+                    <label class="form-check-label" for="rememberMe">
+                      Remember me
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" className="btn btn-primary">
+                  Login
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
